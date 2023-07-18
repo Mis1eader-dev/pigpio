@@ -14,21 +14,21 @@ add_compile_options(-Wall)
 # libpigpio.(so|a)
 add_library(pigpio pigpio.c command.c custom.cext)
 
-target_include_directories(${PROJECT_NAME} PUBLIC
+target_include_directories(pigpio PUBLIC
 	$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
 )
 
 # libpigpiod_if.(so|a)
 add_library(pigpiod_if pigpiod_if.c command.c)
 
-target_include_directories(${PROJECT_NAME} PUBLIC
+target_include_directories(pigpiod_if PUBLIC
 	$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
 )
 
 # libpigpiod_if2.(so|a)
 add_library(pigpiod_if2 pigpiod_if2.c command.c)
 
-target_include_directories(${PROJECT_NAME} PUBLIC
+target_include_directories(pigpiod_if2 PUBLIC
 	$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
 )
 
